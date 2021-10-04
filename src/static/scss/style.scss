@@ -1,0 +1,130 @@
+@import "base/reset";
+@import "variables/fonts";
+@import "variables/colors";
+
+body {
+  background-color: $color-primary;
+  font-family: "Gemunu Libre", sans-serif;
+  font-weight: 200;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [sidebar-start] 300px [full-end];
+  grid-template-rows: [landing-start] 100vh [landing-end];
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.landing {
+  grid-column: full-start / full-end;
+  grid-row: landing-start / landing-end;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+    clip: rect(0, auto, auto, 0);
+    z-index: 95;
+  }
+
+  &__title-box {
+    margin-left: 200px;
+    cursor: default;
+  }
+
+  &__title {
+    font-size: 100px;
+    line-height: 1;
+    color: $color-white;
+    transform: translateX(200px);
+    opacity: 0;
+    &:nth-child(1) {
+      animation: slide-left-big 0.7s 1s 1 ease-in-out forwards;
+    }
+    &:nth-child(2) {
+      animation: slide-left-big 0.7s 1.2s 1 ease-in-out forwards;
+    }
+  }
+
+  &__subtitle-box {
+    margin-left: 5px;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    display: inline-block;
+    line-height: 1;
+    color: $color-white;
+    margin-top: 20px;
+    transform: translateX(300px);
+    opacity: 0;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &:nth-child(1) {
+      animation: slide-left-big 0.7s 2s 1 ease-in-out forwards;
+    }
+    &:nth-child(2) {
+      animation: slide-left-big 0.7s 3s 1 ease-in-out forwards;
+    }
+    &:nth-child(3) {
+      animation: slide-left-big 0.7s 4s 1 ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes slide-left-big {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.test-section {
+  grid-column: full-start / full-end;
+  height: 3000px;
+  background-color: $color-white;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  bottom: 50%;
+  right: 20vw;
+  width: 250px;
+
+  &.first {
+    color: $color-white;
+    z-index: 100;
+  }
+  &.second {
+    z-index: 90;
+    color: $color-primary;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 500;
+    li {
+      opacity: 0;
+      cursor: pointer;
+      animation: slide-left-big 0.7s 4s 1 ease-in-out forwards;
+      transition: 0.1s;
+      &:hover {
+        padding-left: 5px;
+      }
+    }
+  }
+}
