@@ -1,0 +1,28 @@
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-medium: 53.125em; //850px
+$bp-small: 37.5em; //600px
+$bp-smaller: 25em; //600px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == smaller {
+    @media only screen and (max-width: $bp-smaller) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media only screen and (max-width: $bp-small) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media only screen and (max-width: $bp-medium) {
+      @content;
+    }
+  }
+  @if $breakpoint == largest {
+    @media only screen and (max-width: $bp-largest) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,200 @@
+.sidebar {
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+  width: $sidebar-width;
+
+  @include respond(largest) {
+    width: $sidebar-width-small;
+  }
+  @include respond(medium) {
+    visibility: hidden;
+  }
+
+  &.first {
+    color: $color-white;
+    z-index: 100;
+  }
+  &.second {
+    z-index: 90;
+    color: $color-primary;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 400;
+    padding: 0;
+
+    .scroll-link {
+      opacity: 0;
+      cursor: pointer;
+      animation: slide-left-big 0.7s 0.4s 1 ease-in-out forwards;
+      transition: 0.1s;
+      padding-right: 5px;
+      transition: $transition;
+      &:hover {
+        padding-left: 5px;
+        padding-right: 0;
+      }
+      &.active {
+        padding-left: 10px;
+      }
+      & .up {
+        height: 20px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.sidebar-mobile {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  background-color: $color-primary;
+  color: $color-white;
+  visibility: hidden;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  transition: $transition;
+  transform: translateX(150px);
+  &.active {
+    transform: translateX(0);
+  }
+
+  @include respond(medium) {
+    visibility: visible;
+  }
+
+  &__button {
+    z-index: 300;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+    visibility: hidden;
+    @include respond(medium) {
+      visibility: visible;
+    }
+    &__middle-bar {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      height: 2px;
+      width: 25px;
+      background-color: $color_white;
+      transition: $transition;
+
+      &::before,
+      &::after {
+        content: "";
+        height: 2px;
+        display: block;
+        width: 25px;
+        background-color: $color_white;
+        position: absolute;
+        transition: 0.1s;
+      }
+
+      &::before {
+        transform: translateY(-8px);
+      }
+
+      &::after {
+        transform: translateY(8px);
+      }
+
+      &.active {
+        background-color: transparent;
+
+        &::before {
+          transform: translateY(0px) rotate(135deg);
+        }
+
+        &::after {
+          transform: translateY(0px) rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  &.active &__menu {
+    transform: translateX(0);
+  }
+
+  &__menu {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    transition: $transition;
+    list-style: none;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 300;
+    padding: 0 0 0 20px;
+    transform: translateX(50px);
+
+    .scroll-link {
+      cursor: pointer;
+      padding-right: 5px;
+      margin-bottom: 5px;
+      transition: $transition;
+      &:hover {
+        padding-left: 5px;
+        padding-right: 0;
+      }
+
+      &.active {
+        padding-left: 10px;
+      }
+      & .up {
+        fill: $color-white;
+        height: 15px;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__vertical-text {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    transition: $transition;
+  }
+
+  &.active &__vertical-text {
+    opacity: 0;
+  }
+
+  &__footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    align-self: center;
+    justify-self: center;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0 20px;
+    text-align: center;
+    transform: translateX(50px);
+    transition: $transition;
+  }
+
+  &.active &__footer {
+    transform: translateX(0);
+  }
+}

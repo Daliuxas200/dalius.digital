@@ -1,0 +1,8 @@
+.section-contacts {
+  &__inner {
+    grid-column: gutter-left / sidebar-gap;
+  }
+
+  background-color: lightgray;
+  display: grid;
+}

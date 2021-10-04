@@ -1,0 +1,15 @@
+@mixin section-grid {
+  grid-template-columns: [full-start] 200px [gutter-left] 1fr [sidebar-gap] 50px [sidebar-start] $sidebar-width [full-end];
+  @include respond(largest) {
+    grid-template-columns: [full-start] 100px [gutter-left] 1fr [sidebar-gap] 50px [sidebar-start] $sidebar-width-small [full-end];
+  }
+  @include respond(medium) {
+    grid-template-columns: [full-start] 100px [gutter-left] 1fr [sidebar-gap] 0 [sidebar-start] 150px [full-end];
+  }
+  @include respond(small) {
+    grid-template-columns: [full-start] 50px [gutter-left] 1fr [sidebar-gap] 0 [sidebar-start] 100px [full-end];
+  }
+  @include respond(smaller) {
+    grid-template-columns: [full-start] 20px [gutter-left] 1fr [sidebar-gap] 0 [sidebar-start] 70px [full-end];
+  }
+}

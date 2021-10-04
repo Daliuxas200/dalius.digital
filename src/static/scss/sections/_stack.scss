@@ -1,0 +1,8 @@
+.section-stack {
+  &__inner {
+    grid-column: gutter-left / sidebar-gap;
+  }
+
+  background-color: lightpink;
+  display: grid;
+}

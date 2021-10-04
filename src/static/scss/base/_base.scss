@@ -1,0 +1,10 @@
+body {
+  font-family: "Gemunu Libre", sans-serif;
+  font-weight: 200;
+  display: grid;
+  @include section-grid;
+  grid-template-rows: [landing-start] 100vh [landing-end];
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  letter-spacing: 1px;
+}

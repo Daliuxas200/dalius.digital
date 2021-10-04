@@ -1,0 +1,8 @@
+.section-about {
+  &__inner {
+    grid-column: gutter-left / sidebar-gap;
+  }
+
+  background-color: $color-white;
+  display: grid;
+}

@@ -1,11 +1,9 @@
 import "./static/scss/style.scss";
 
-let sidebarFirst = document.querySelector(".sidebar.first");
-let sidebarSecond = document.querySelector(".sidebar.second");
+const adjustSidebar = require("./js/sidebar");
+const navigation = require("./js/navigation");
 
-window.addEventListener("DOMContentLoaded", (event) => {
-  const height = sidebarFirst.clientHeight;
-  sidebarFirst.style.transform = `translateY(${height / 2}px)`;
-  sidebarSecond.style.transform = `translateY(${height / 2}px)`;
-  console.log(height);
+document.addEventListener("DOMContentLoaded", () => {
+  navigation();
+  adjustSidebar();
 });
