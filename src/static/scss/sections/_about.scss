@@ -1,8 +1,55 @@
 .section-about {
-  &__inner {
-    grid-column: gutter-left / sidebar-gap;
-  }
-
   background-color: $color-white;
   display: grid;
+  min-height: 100vh;
+  align-items: center;
+  position: relative;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    column-gap: 60px;
+    align-items: center;
+    @include respond(largest) {
+      grid-template-columns: 1fr 0.6fr;
+      row-gap: 30px;
+    }
+  }
+
+  &__left {
+    z-index: 10;
+    grid-column: 1 / 2;
+    @include respond(medium) {
+      grid-column: 1/3;
+    }
+  }
+
+  &__right {
+    z-index: 10;
+    grid-column: 2 / 3;
+    padding-right: 10px;
+    @include respond(medium) {
+      grid-column: 1/3;
+    }
+  }
+
+  & .spinning-square {
+    &--1 {
+      top: 20%;
+      right: 70%;
+      animation-duration: 95s;
+      width: 300px;
+      height: 300px;
+    }
+    &--2 {
+      top: 40%;
+      right: 17%;
+      animation-duration: 40s;
+    }
+    &--3 {
+      top: 63%;
+      right: 40%;
+      animation-duration: 62s;
+    }
+  }
 }

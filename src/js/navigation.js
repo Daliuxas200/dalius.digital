@@ -47,9 +47,9 @@ function scrollNavigation() {
       return sections
         .filter(
           (s) =>
-            window.scrollY >= s.offsetTop - window.innerHeight / 4 &&
+            window.scrollY >= s.offsetTop - window.innerHeight / 2 &&
             window.scrollY <
-              s.offsetTop + s.clientHeight - window.innerHeight / 4
+              s.offsetTop + s.clientHeight - window.innerHeight / 2
         )
         .pop();
     }

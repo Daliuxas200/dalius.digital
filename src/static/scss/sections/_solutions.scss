@@ -1,0 +1,12 @@
+.section-solutions {
+  background-color: white;
+  display: grid;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    column-gap: 50px;
+    margin-bottom: 50px;
+  }
+}

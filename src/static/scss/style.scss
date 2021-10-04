@@ -7,11 +7,13 @@
 @import "base/reset";
 @import "base/base";
 
+@import "components/components";
+@import "components/sidebar";
+
 @import "sections/section";
 @import "sections/landing";
 @import "sections/about";
 @import "sections/projects";
 @import "sections/stack";
 @import "sections/contacts";
-
-@import "components/sidebar";
+@import "sections/solutions";

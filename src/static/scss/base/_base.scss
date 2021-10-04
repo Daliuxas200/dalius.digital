@@ -8,3 +8,19 @@ body {
   text-rendering: geometricPrecision;
   letter-spacing: 1px;
 }
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.link {
+  color: $color-secondary-dark;
+  cursor: pointer;
+}

@@ -18,35 +18,124 @@
           </div>
         </div>
         <sidebar class="sidebar first">
-          <ul class="sidebar__menu scroll-menu" id="sidebar-menu-1">
-          </ul>
+          <ul class="sidebar__menu scroll-menu" id="sidebar-menu-1"></ul>
         </sidebar>
       </div>
     </section>
 
     <!-- sections -->
-    <section class="section-about section" id="section-about" data-title="About">
-      <div class="section-about__inner">
-        <h2>About DD</h2>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
+    <section
+      class="section-about section"
+      id="section-about"
+      data-title="About"
+    >
+      <div class="section__inner section-about__inner">
+        <div class="section-about__left">
+          <h2>About Dalius Digital</h2>
+          <p>
+            Dalius Digital is an online portolio and personal Webpage of me -
+            Dalius! It's meant to serve as a showcase of my programming work, as
+            a staging ground for my freelance work and last but not least as a
+            fun enviroment to test out and implement new stuff that i learn or
+            find interesting!
+          </p>
+          <p>
+            Feel free to
+            <span class="scroll-link link" data-target="section-solutions"
+              >Scroll down</span
+            >
+            if you want to learn more about where we could colaborate or if you
+            just want to check out my website!
+          </p>
+        </div>
+        <div class="section-about__right">
+          <img
+            src="<%= require('./static/images/dog.jpg') %>"
+            alt=""
+            class="shadow-image"
+          />
+        </div>
+      </div>
+      <div class="spinning-square spinning-square--1"></div>
+      <div class="spinning-square spinning-square--2"></div>
+      <div class="spinning-square spinning-square--3"></div>
     </section>
-  
-    <section class="section-projects section" id="section-projects" data-title="Completed projects">
-      <div class="section-about__inner">
-        <h2>About DD</h2>
+
+    <section
+      class="section-solutions section"
+      id="section-solutions"
+      data-title="Custom Solutions"
+    >
+      <div class="section__inner">
+        <h2>Why choose a Custom Web Solution?</h2>
+        <p>
+          There are a multitude of reasons to choose a custom made Webpage
+          instead of using common website builder solutions, Lets explore some
+          of them!
+        </p>
+        <div class="section-solutions__cards">
+          <div class="flippy-card">
+            <div class="flippy-card__front">
+              <h3 class="flippy-card__front__title">Stand Out!</h3>
+
+              <p>text text tex</p>
+            </div>
+            <div class="flippy-card__back">bye</div>
+          </div>
+          <div class="flippy-card">
+            <div class="flippy-card__front">
+              <h3 class="flippy-card__front__title">
+                Bring Your Vision to Reality
+              </h3>
+
+              <p>text text tex</p>
+            </div>
+            <div class="flippy-card__back">bye</div>
+          </div>
+          <div class="flippy-card">
+            <div class="flippy-card__front">
+              <h3 class="flippy-card__front__title">Save Time</h3>
+
+              <p>text text tex</p>
+            </div>
+            <div class="flippy-card__back">bye</div>
+          </div>
+        </div>
+
+        <p>
+          Online pressence has become a fundamental part of any successful
+          business. Having an engaging, unique and good looking website that can
+          both capture peoples atention and be easily accesible from the search
+          engines can often mean the difference between making it or breaking
+          it.
+        </p>
+        <p>
+          Although there are many website builder solutions available in the
+          market, they leave much to be desired and have many disadvantages.
+          First of all they are often very similar and don't stand out among
+          competition. Furthermore, because of unavoidable constraints, editing
+          and customizing these sites usually is a frustrating and time
+          consuming ordeal. In the end you are left with a compromise of a
+          website that doesn't stand out, has wanted features missing and has a
+          top of features that are redundant or unnecessary.
+        </p>
+        <p>
+          We offer fully custom solutions to make your visions real, and your
+          bussiness thrive. From completely simple and lightweight static one
+          page landing websites, to complex multi page themes with content
+          managment systems and integrated 3rd party tools, lets make it work
+          together!
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="section-projects section"
+      id="section-projects"
+      data-title="Completed projects"
+    >
+      <div class="section__inner">
+        <h2>Completed Projects</h2>
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -92,9 +181,13 @@
       </div>
     </section>
 
-    <section class="section-stack section" id="section-stack" data-title="Tech Stack">
-      <div class="section-about__inner">
-        <h2>About DD</h2>
+    <section
+      class="section-stack section"
+      id="section-stack"
+      data-title="Tech Stack"
+    >
+      <div class="section__inner">
+        <h2>Technology Stack</h2>
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -140,23 +233,13 @@
       </div>
     </section>
 
-    <section class="section-contacts section" id="section-contacts" data-title="Contact Info">
-      <div class="section-about__inner">
-        <h2>About DD</h2>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
+    <section
+      class="section-contacts section"
+      id="section-contacts"
+      data-title="Contact Info"
+    >
+      <div class="section__inner">
+        <h2>Contact Info</h2>
         <p>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC, making
@@ -189,33 +272,7 @@
     </section>
 
     <footer>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making
-        it over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going
-        through the cites of the word in classical literature, discovered the
-        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the
-        theory of ethics, very popular during the Renaissance. The first line
-        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-        section 1.10.32.
-      </p><p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making
-        it over 2000 years old. Richard McClintock, a Latin professor at
-        Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going
-        through the cites of the word in classical literature, discovered the
-        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-        1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-        Evil) by Cicero, written in 45 BC. This book is a treatise on the
-        theory of ethics, very popular during the Renaissance. The first line
-        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-        section 1.10.32.
-      </p>
+      <p>Copyrigght dalius.digital 2021</p>
     </footer>
     <!-- Menus -->
     <sidebar class="sidebar second">
@@ -227,9 +284,12 @@
       <div class="sidebar-mobile__button__middle-bar"></div>
     </div>
     <sidebar class="sidebar-mobile" id="mobile-nav">
-      <span class="sidebar-mobile__vertical-text" id='sidebar-vertical-text'></span>
+      <span
+        class="sidebar-mobile__vertical-text"
+        id="sidebar-vertical-text"
+      ></span>
       <ul class="sidebar-mobile__menu scroll-menu" id="sidebar-menu-mobile">
-        <li class="scroll-link" data-target="section-landing">Back to top </li>
+        <li class="scroll-link" data-target="section-landing">Back to top</li>
       </ul>
       <div class="sidebar-mobile__footer">
         © 2021 dalius.digital, Lithuania.

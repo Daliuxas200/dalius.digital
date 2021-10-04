@@ -1,0 +1,72 @@
+.shadow-image {
+  box-shadow: $color-primary 15px 15px 0 0;
+}
+
+.spinning-square {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: $color-light-grey;
+  animation: spin 40s linear 0s infinite;
+  z-index: 1;
+}
+
+// Flipping cards
+.flippy-card {
+  width: 100%;
+  height: 400px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  perspective: 150rem;
+  transition: 0.1s;
+
+  &:hover {
+    transform: translate(-1px, -1px);
+  }
+
+  &__front,
+  &__back {
+    perspective: 150rem;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.5s, background-color 0.1s, box-shadow 0.1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 10px 10px 0 $color-primary;
+    &:hover {
+      box-shadow: 11px 11px 0 1px $color-primary;
+    }
+  }
+
+  &__front {
+    background-color: $color-white;
+    border: 3px solid $color-primary;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__back {
+    background-color: $color-secondary;
+    border: 3px solid $color-primary;
+
+    transform: rotateY(180deg);
+    height: 100%;
+  }
+
+  &.flipped &__front {
+    transform: rotateY(-180deg);
+  }
+
+  &.flipped &__back {
+    transform: rotateY(0);
+  }
+}
