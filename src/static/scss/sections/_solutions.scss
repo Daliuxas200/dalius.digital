@@ -1,12 +1,27 @@
 .section-solutions {
   background-color: white;
   display: grid;
+  min-height: 100vh;
+  align-items: center;
 
   &__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     column-gap: 50px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    @include respond(large) {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
+      & .flippy-card:nth-child(1) {
+        justify-self: start;
+      }
+      & .flippy-card:nth-child(2) {
+        justify-self: center;
+      }
+      & .flippy-card:nth-child(3) {
+        justify-self: end;
+      }
+    }
   }
 }

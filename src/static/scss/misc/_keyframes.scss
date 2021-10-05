@@ -17,3 +17,20 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes blink {
+  0% {
+    color: $color-primary;
+  }
+  50% {
+    color: $color-primary;
+  }
+  51% {
+    font-weight: 500;
+    color: $color-secondary-dark;
+  }
+  100% {
+    font-weight: 500;
+    color: $color-secondary-dark;
+  }
+}

@@ -14,6 +14,7 @@
 // Flipping cards
 .flippy-card {
   width: 100%;
+  max-width: 400px;
   height: 400px;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -22,8 +23,17 @@
   perspective: 150rem;
   transition: 0.1s;
 
-  &:hover {
-    transform: translate(-1px, -1px);
+  @include respond(large) {
+    height: 300px;
+  }
+  @include respond(medium) {
+    height: 300px;
+  }
+  @include respond(small) {
+    height: 380px;
+  }
+  @include respond(smaller) {
+    height: 400px;
   }
 
   &__front,
@@ -47,19 +57,103 @@
   &__front {
     background-color: $color-white;
     border: 3px solid $color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
 
     &__title {
       text-align: center;
-      margin-bottom: 30px;
+      font-size: 35px;
+      transform: rotate(10deg);
+      text-decoration: underline;
+      @include respond(small) {
+        font-size: 30px;
+      }
+    }
+
+    &__button {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 400;
+      &--1 {
+        animation: blink 1s linear 0.1s infinite;
+      }
+      &--2 {
+        animation: blink 1s linear 0.2s infinite;
+      }
+      &--3 {
+        animation: blink 1s linear 0.3s infinite;
+      }
     }
   }
 
   &__back {
     background-color: $color-secondary;
     border: 3px solid $color-primary;
-
     transform: rotateY(180deg);
     height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    @include respond(smaller) {
+      padding: 15px;
+    }
+
+    &__header {
+      display: grid;
+      grid-template-columns: 1fr 30px;
+      margin-bottom: 20px;
+      @include respond(small) {
+        grid-template-columns: 1fr 25px;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      @include respond(smaller) {
+        font-size: 18px;
+      }
+    }
+
+    &__text {
+      @include respond(smaller) {
+        font-size: 14px;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      width: 100%;
+      flex-grow: 1;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+
+      li {
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+        border-bottom: 3px solid $color-primary;
+        @include respond(smaller) {
+          font-size: 14px;
+        }
+        span {
+          display: inline-block;
+          height: 100%;
+          background-color: $color-secondary;
+          transform: translateY(10px);
+          &:last-child {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
   }
 
   &.flipped &__front {
