@@ -30,10 +30,7 @@
     height: 300px;
   }
   @include respond(small) {
-    height: 380px;
-  }
-  @include respond(smaller) {
-    height: 400px;
+    height: 320px;
   }
 
   &__front,

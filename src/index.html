@@ -184,24 +184,43 @@
             <ul class="project__navigation">
               <li class="project__navigation__item active" data-id="about"><span>About</span></li>
               <li class="project__navigation__item" data-id="features"><span>Features</span></li>
-              <li class="project__navigation__item" data-id="stack"><span>Tech Stack</span></li>
+              <li class="project__navigation__item" data-id="stack"><span>Stack</span></li>
             </ul>
-            <div class="project__image-container">
-              <img
-                src="<%= require('./static/images/aig.png') %>"
-                alt=""
-                class="project__image"
-              />
-          </div>
-            <div class="project__content-box">
+            <a class="project__image-container-wrap"  href="https://www.atgaligamta.org/" target="_blank">
+              <figure class="project__image-container project__image-container--aig">
+                <img
+                  src="<%= require('./static/images/aig.svg') %>"
+                  alt=""
+                  class="project__image"
+                />
+              </figure>
+            </a>
+            <div class="project__content-box project__content-box--aig">
               <div class="project__content active" data-id="about">
-                About
+                <p><b>Atgal į Gamtą</b> is wildlife rehabilitation Non-profit organisation based in Vilnius, Lithuania. Their focus is education of the public, rehabilitation of small birds and mammals, and their eventual reintroduction into the wild. Operation is almost entirely volunteer based and funded by donations, thus and having an engaging Web presence was paramount to grow the operations.</p>
+                <p>Follow <a href="https://www.atgaligamta.org/" target="_blank"> the link to their website</a> to learn more about their great work!</p>
               </div>
               <div class="project__content" data-id="features">
-                Features
+                <ul>
+                  <li>Wordpress powered custom theme, professionaly designed by <a href="https://www.lauradirzyte.com">Laura Diržytė</a></li>
+                  <li>Fully customizeable Homepage with reusable and fully customizable Drag and Drop sections</li>
+                  <li>Ability to include any custom Section into any other Page or Post</li>
+                  <li>Effective use of CSS and JS preprocessors, image compression and Cache control, resulting in a lightweight Website for fast serving speeds.</li>
+                  <li>Custom editor Blocks</li>
+                </ul>
               </div>
               <div class="project__content" data-id="stack">
-                Tech Stack
+                <ul class="project__content__stack">
+                  <li><img src="<%= require('./static/images/wordpress.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/php.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/mysql.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/html.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/js.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/css.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/sass.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/webpack.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/ga.png') %>" alt=""></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -211,24 +230,41 @@
             <ul class="project__navigation">
               <li class="project__navigation__item active" data-id="about"><span>About</span></li>
               <li class="project__navigation__item" data-id="features"><span>Features</span></li>
-              <li class="project__navigation__item" data-id="stack"><span>Tech Stack</span></li>
+              <li class="project__navigation__item" data-id="stack"><span>Stack</span></li>
             </ul>
-            <div class="project__image-container">
-              <img
-                src="<%= require('./static/images/oorlu.png') %>"
-                alt=""
-                class="project__image"
-              />
-            </div>
-            <div class="project__content-box">
+            <a href="https://oor.lu/" target="_blank" class="project__image-container-wrap">
+              <figure class="project__image-container project__image-container--oorlu">
+                <img
+                  src="<%= require('./static/images/oorlu.svg') %>"
+                  alt=""
+                  class="project__image"
+                />
+              </figure>
+            </a>
+            <div class="project__content-box project__content-box--oorlu">
               <div class="project__content active" data-id="about">
-                About
+                <p><b>Oor.lu</b> is a lightweight url shortener. Utilising minimalistic design phylosophy and requiring zero dependencies to run the Front-end, resulted in an ultra light weight website for lightning fast presentation. Backend created by <a href="https://www.linkedin.com/in/adamwojtczak/" target="_blank">Adam Wojtczak</a> using django-REST (Python), PostgreSQL and Redis cache. Design by <a href="https://austeja.art/">Austėja Slavickaitė Wojtczak</a>.</p>
+                <p>Visit <a href="https://oor.lu/" target="_blank">the site</a> to try it out and learn more!</p>
               </div>
               <div class="project__content" data-id="features">
-                Features
+                <ul>
+                  <li>Webpack powered SCSS, JS and image preprocessing for ultra-lightweight package and serving speeds.</li>
+                  <li>Vanilla JS written interactive front end, requiring zero dependencies.</li>
+                  <li>Professional Design by <a href="https://austeja.art/">Austėja Slavickaitė Wojtczak</a></li>
+                  <li>Professional Backend by <a href="https://www.linkedin.com/in/adamwojtczak/" target="_blank">Adam Wojtczak</a></li>
+                </ul>
               </div>
               <div class="project__content" data-id="stack">
-                Tech Stack
+                <ul class="project__content__stack">
+                  <li><img src="<%= require('./static/images/python.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/django.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/redis.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/html.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/js.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/css.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/sass.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/webpack.png') %>" alt=""></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -237,24 +273,39 @@
             <ul class="project__navigation">
               <li class="project__navigation__item active" data-id="about"><span>About</span></li>
               <li class="project__navigation__item" data-id="features"><span>Features</span></li>
-              <li class="project__navigation__item" data-id="stack"><span>Tech Stack</span></li>
+              <li class="project__navigation__item" data-id="stack"><span>Stack</span></li>
             </ul>
-            <div class="project__image-container">
+            <div class="project__image-container-wrap">
+            <figure class="project__image-container project__image-container--sengire">
               <img
                 src="<%= require('./static/images/sengire.png') %>"
                 alt=""
                 class="project__image"
               />
+            </figure>
             </div>
-            <div class="project__content-box">
+            <div class="project__content-box project__content-box--sengire">
               <div class="project__content active" data-id="about">
-                About
+                <p><b>Sengirė</b> is an award winning nature documentary by Mindaugas Survila. Filmed in one of the last remaining patches of old growth forest in Lithuania, "The Ancient Woods" is a place where the boundaries of time melt and everything that exists does not wither or age but “grows into” eternity.</p>
+                <p>Visit <a href="http://www.sengire.lt">Sengirė website</a> to find out more about this project, and other future projects of Mindaugas Survila!</p>
               </div>
               <div class="project__content" data-id="features">
-                Features
+                <ul>
+                  <li>Simplistic and Straightforward</li>
+                  <li>Paralax Images for professional look</li>
+                  <li>Integrated Facebook plugin</li>
+                  <li>Professionally designed by Povilas Zaleckis</li>
+                </ul>
               </div>
               <div class="project__content" data-id="stack">
-                Tech Stack
+                <ul class="project__content__stack">
+                  <li><img src="<%= require('./static/images/php.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/html.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/js.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/css.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/gulp.png') %>" alt=""></li>
+                  <li><img src="<%= require('./static/images/sass.png') %>" alt=""></li>
+                </ul>
               </div>
             </div>
           </div>
