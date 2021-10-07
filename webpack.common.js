@@ -4,12 +4,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: "[name].js",
+    path: path.resolve(__dirname, "../dalius.digital.prod"),
+    clean: false,
   },
   module: {
     rules: [
@@ -69,7 +71,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: "[name].css",
     }),
     new HtmlWebpackPlugin({
       title: "Dalius Digital",
@@ -83,9 +85,11 @@ module.exports = {
         description:
           "Front end and Back end development solutions. Personal portfolio of Dalius Slavickas.",
         charset: "UTF-8",
+        viewport: "width=device-width, initial-scale=1.0",
       },
     }),
     new CleanWebpackPlugin(),
+    new ImageMinimizerPlugin(),
     new FaviconsWebpackPlugin({
       logo: "./src/static/images/dd_fav.png",
       outputPath: "static/favicon",
