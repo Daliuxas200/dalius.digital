@@ -1,17 +1,17 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "../dalius.digital.prod"),
-    clean: false,
+    path: path.resolve(__dirname, "prod"),
+    clean: true,
   },
   module: {
     rules: [
@@ -49,6 +49,7 @@ module.exports = {
             options: {
               outputPath: "static/images",
               esModule: false,
+              name: "[name].[ext]",
             },
           },
           {
@@ -65,6 +66,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           outputPath: "static/fonts",
+          name: "[name].[ext]",
         },
       },
     ],
@@ -73,6 +75,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Dalius Digital",
       filename: "index.html",
@@ -88,7 +91,6 @@ module.exports = {
         viewport: "width=device-width, initial-scale=1.0",
       },
     }),
-    new CleanWebpackPlugin(),
     new ImageMinimizerPlugin(),
     new FaviconsWebpackPlugin({
       logo: "./src/static/images/dd_fav.png",
