@@ -9,6 +9,7 @@
   }
   @include respond(medium) {
     visibility: hidden;
+    display: none;
   }
 
   &.first {
@@ -60,6 +61,7 @@
   background-color: $color-primary;
   color: $color-white;
   visibility: hidden;
+  display: none;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
   transition: $transition;
@@ -74,6 +76,7 @@
 
   @include respond(medium) {
     visibility: visible;
+    display: block;
   }
 
   &__button {

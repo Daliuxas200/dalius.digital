@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
@@ -91,7 +90,6 @@ module.exports = {
         viewport: "width=device-width, initial-scale=1.0",
       },
     }),
-    new ImageMinimizerPlugin(),
     new FaviconsWebpackPlugin({
       logo: "./src/static/images/dd_fav.png",
       outputPath: "static/favicon",
