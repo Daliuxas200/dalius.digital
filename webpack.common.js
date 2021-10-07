@@ -72,9 +72,18 @@ module.exports = {
       filename: "[name].[contenthash].css",
     }),
     new HtmlWebpackPlugin({
-      title: "dalius.digital",
+      title: "Dalius Digital",
       filename: "index.html",
       template: "./src/index.html",
+      minify: true,
+      meta: {
+        author: "Dalius Slavickas",
+        keywords:
+          "Portfolio CV frontend backend programming design node react personal mongodb",
+        description:
+          "Front end and Back end development solutions. Personal portfolio of Dalius Slavickas.",
+        charset: "UTF-8",
+      },
     }),
     new CleanWebpackPlugin(),
     new FaviconsWebpackPlugin({

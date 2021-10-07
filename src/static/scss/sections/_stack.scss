@@ -1,8 +1,48 @@
 .section-stack {
+  min-height: 100vh;
+  align-items: center;
+
   &__inner {
     grid-column: gutter-left / sidebar-gap;
   }
 
+  &__stack {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding-left: 0;
+    gap: 20px;
+    @include respond(small) {
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 30px;
+      @include respond(small) {
+        margin-bottom: 20px;
+      }
+      @include respond(smaller) {
+        margin-bottom: 10px;
+      }
+    }
+
+    img {
+      transition: 0.05s;
+      max-height: 60px;
+      @include respond(small) {
+        max-height: 50px;
+      }
+      @include respond(smaller) {
+        max-height: 40px;
+      }
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
   background-color: white;
   display: grid;
 }

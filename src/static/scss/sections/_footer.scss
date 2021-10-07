@@ -1,0 +1,30 @@
+.footer {
+  background-color: $color-primary;
+  grid-column: full-start / full-end;
+  @include section-grid;
+  color: $color-white;
+  display: grid;
+
+  &__inner {
+    grid-column: gutter-left / sidebar-gap;
+    padding: 80px 0;
+    @include respond(small) {
+      padding: 50px 0;
+    }
+  }
+
+  &__text {
+    @include respond(small) {
+      font-size: 14px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:first-child {
+      margin-bottom: 10px;
+      @include respond(small) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

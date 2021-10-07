@@ -23,7 +23,6 @@
       </div>
     </section>
 
-    <!-- sections -->
     <!-- About -->
     <section
       class="section-about section"
@@ -224,7 +223,7 @@
               </div>
             </div>
           </div>
-          
+        
         <div class="project">
             <h3 class="project__title">Oor.lu</h3>
             <ul class="project__navigation">
@@ -268,6 +267,7 @@
               </div>
             </div>
           </div>
+
         <div class="project">
             <h3 class="project__title">Sengirė</h3>
             <ul class="project__navigation">
@@ -275,7 +275,8 @@
               <li class="project__navigation__item" data-id="features"><span>Features</span></li>
               <li class="project__navigation__item" data-id="stack"><span>Stack</span></li>
             </ul>
-            <div class="project__image-container-wrap">
+            <a class="project__image-container-wrap" href="http://sengire.lt/" target="_blank">
+              
             <figure class="project__image-container project__image-container--sengire">
               <img
                 src="<%= require('./static/images/sengire.png') %>"
@@ -283,7 +284,7 @@
                 class="project__image"
               />
             </figure>
-            </div>
+          </a>
             <div class="project__content-box project__content-box--sengire">
               <div class="project__content active" data-id="about">
                 <p><b>Sengirė</b> is an award winning nature documentary by Mindaugas Survila. Filmed in one of the last remaining patches of old growth forest in Lithuania, "The Ancient Woods" is a place where the boundaries of time melt and everything that exists does not wither or age but “grows into” eternity.</p>
@@ -314,58 +315,38 @@
       </div>
     </section>
 
+    <!-- Technology Stacks -->
     <section
       class="section-stack section"
       id="section-stack"
       data-title="Tech Stack"
     >
-      <div class="section__inner">
+      <div class="section__inner section-stack__inner">
         <h2>Technology Stack</h2>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
+        <p>A list of technologies and tools that i use in my projects, work, or that i am currently learning or interested in</p>
+        <ul class="section-stack__stack">
+          <li><a target="_blank" href="https://en.wikipedia.org/wiki/HTML5"><img src="<%= require('./static/images/html.png') %>" alt="html5"></a></li>
+          <li><a target="_blank" href="https://www.javascript.com/"><img src="<%= require('./static/images/js.png') %>" alt="js"></a></li>
+          <li><a target="_blank" href="https://en.wikipedia.org/wiki/CSS"><img src="<%= require('./static/images/css.png') %>" alt="css"></a></li>
+          <li><a target="_blank" href="https://reactjs.org/"><img src="<%= require('./static/images/react.png') %>" alt="react.js"></a></li>
+          <li><a target="_blank" href="https://webpack.js.org/"><img src="<%= require('./static/images/webpack.png') %>" alt="webpack.js"></a></li>
+          <li><a target="_blank" href="https://sass-lang.com/"><img src="<%= require('./static/images/sass.png') %>" alt="sass"></a></li>
+          <li><a target="_blank" href="https://expressjs.com/"><img src="<%= require('./static/images/expressjs.png') %>" alt="express.js"></a></li>
+          <li><a target="_blank" href="https://nodejs.org/en/"><img src="<%= require('./static/images/node.png') %>" alt="node.js"></a></li>
+          <li><a target="_blank" href="https://www.mongodb.com"><img src="<%= require('./static/images/mongodb.png') %>" alt="MongoDB"></a></li>
+          <li><a target="_blank" href="https://www.php.net/"><img src="<%= require('./static/images/php.png') %>" alt="PHP"></a></li>
+          <li><a target="_blank" href="https://wordpress.com"><img src="<%= require('./static/images/wordpress.png') %>" alt="Wordpress"></a></li>
+          <li><a target="_blank" href="https://www.mysql.com/"><img src="<%= require('./static/images/mysql.png') %>" alt="MySQL"></a></li>
+          <li><a target="_blank" href="https://www.postgresql.org/"><img src="<%= require('./static/images/postgresql.png') %>" alt="PostgreSQL"></a></li>
+          <li><a target="_blank" href="https://code.visualstudio.com/"><img src="<%= require('./static/images/vscode.png') %>" alt="VSCode"></a></li>
+          <li><a target="_blank" href="https://github.com/"><img src="<%= require('./static/images/github.png') %>" alt="GitHub"></a></li>
+          <li><a target="_blank" href="https://www.postman.com/"><img src="<%= require('./static/images/postman.png') %>" alt="Postman"></a></li>
+          <li><a target="_blank" href="https://www.postman.com/"><img src="<%= require('./static/images/ga.png') %>" alt="Google Analytics"></a></li>
+        </ul>
       </div>
     </section>
 
+    <!-- Contacts  -->
     <section
       class="section-contacts section"
       id="section-contacts"
@@ -373,39 +354,34 @@
     >
       <div class="section__inner">
         <h2>Contact Info</h2>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32.
-        </p>
+        <p>I'm always open for new opportunities and interesting projects. If you have ideas that you want to materialise in reality or something where we could colaborate, feel free to contact me on Email or Linkedin!</p>
+        <div class="section-contacts__contacts">
+            <a class="section-contacts__contact" href="https://www.linkedin.com/in/dalius-slavickas-6579646b/" target="_blank">
+              <img
+              src="<%= require('./static/images/li.svg') %>"
+              alt="LinkedIn"
+            />
+            <span>LinkediIn</span>
+          </a>
+          <div id="email" class="section-contacts__contact">
+              <img
+              src="<%= require('./static/images/mail.svg') %>"
+              alt="Email"
+            />
+            <span>slavickasd@gmail.com</span>
+          </div>
+
+        </div>
+           
+
       </div>
     </section>
 
-    <footer>
-      <p>Copyrigght dalius.digital 2021</p>
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">© 2021 dalius.digital, Lithuania.</p>
+        <p class="footer__text">Programming and Design by Dalius Slavickas ♥</p>
+      </div>
     </footer>
     <!-- Menus -->
     <sidebar class="sidebar second">
@@ -413,9 +389,11 @@
         <li class="scroll-link" data-target="section-landing">Back to top</li>
       </ul>
     </sidebar>
+
     <div class="sidebar-mobile__button" id="mobile-nav-button">
       <div class="sidebar-mobile__button__middle-bar"></div>
     </div>
+
     <sidebar class="sidebar-mobile" id="mobile-nav">
       <span
         class="sidebar-mobile__vertical-text"

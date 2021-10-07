@@ -22,7 +22,6 @@
 
   ul {
     list-style: none;
-    font-size: 25px;
     margin: 0;
     font-weight: 400;
     padding: 0;
@@ -34,6 +33,8 @@
       transition: 0.1s;
       padding-right: 5px;
       transition: $transition;
+      font-size: 25px;
+
       &:hover {
         padding-left: 5px;
         padding-right: 0;
@@ -63,6 +64,10 @@
   grid-template-rows: 50px 1fr 50px;
   transition: $transition;
   transform: translateX(150px);
+  @include respond(smaller) {
+    transform: translateX(160px);
+  }
+
   &.active {
     transform: translateX(0);
   }
@@ -73,16 +78,21 @@
 
   &__button {
     z-index: 300;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     cursor: pointer;
     display: block;
     visibility: hidden;
+    padding: 5px;
     @include respond(medium) {
       visibility: visible;
+    }
+    @include respond(smaller) {
+      height: 30px;
+      width: 30px;
     }
     &__middle-bar {
       position: absolute;
@@ -95,6 +105,10 @@
       background-color: $color_white;
       transition: $transition;
 
+      @include respond(smaller) {
+        width: 20px;
+      }
+
       &::before,
       &::after {
         content: "";
@@ -104,14 +118,23 @@
         background-color: $color_white;
         position: absolute;
         transition: 0.1s;
+        @include respond(smaller) {
+          width: 20px;
+        }
       }
 
       &::before {
         transform: translateY(-8px);
+        @include respond(smaller) {
+          transform: translateY(-6px);
+        }
       }
 
       &::after {
         transform: translateY(8px);
+        @include respond(smaller) {
+          transform: translateY(6px);
+        }
       }
 
       &.active {
@@ -175,6 +198,10 @@
     text-orientation: upright;
     text-align: center;
     transition: $transition;
+    @include respond(smaller) {
+      left: 7px;
+      font-size: 16px;
+    }
   }
 
   &.active &__vertical-text {
