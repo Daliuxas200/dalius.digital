@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -76,7 +77,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Dalius Digital",
+      title: "Dalius Digital, personal portfolio",
       filename: "index.html",
       template: "./src/index.html",
       minify: true,
@@ -85,15 +86,36 @@ module.exports = {
         keywords:
           "Portfolio CV frontend backend programming design node react personal mongodb",
         description:
-          "Front end and Back end development solutions. Personal portfolio of Dalius Slavickas.",
+          "Design, Front and Back end development. Personal portfolio Website of Dalius Slavickas.",
         charset: "UTF-8",
         viewport: "width=device-width, initial-scale=1.0",
+        "og:type": "website",
+        "og:url": "https://dalius.digital/",
+        "og:title": "Dalius Digital, personal portfolio",
+        "og:description":
+          "Design, Front and Back end development. Personal portfolio Website of Dalius Slavickas.",
+        "og:image": "https://dalius.digital/static/images/dog.jpg",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://dalius.digital/",
+        "twitter:title": "Dalius Digital, personal portfolio",
+        "twitter:description":
+          "Design, Front and Back end development. Personal portfolio Website of Dalius Slavickas.",
+        "twitter:image": "https://dalius.digital/static/images/dog.jpg",
       },
     }),
     new FaviconsWebpackPlugin({
       logo: "./src/static/images/dd_fav.png",
       outputPath: "static/favicon",
       prefix: "static/favicon/",
+    }),
+    new RobotstxtPlugin({
+      policy: [
+        {
+          userAgent: "*",
+          disallow: "",
+        },
+      ],
+      host: "http://dalius.digital",
     }),
   ],
 };

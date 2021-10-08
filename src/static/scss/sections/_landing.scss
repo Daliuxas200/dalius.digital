@@ -29,6 +29,7 @@
     color: $color-white;
     transform: translateX(200px);
     opacity: 0;
+    display: block;
     @include respond(small) {
       font-size: 80px;
     }
@@ -53,6 +54,7 @@
     transform: translateX(300px);
     opacity: 0;
     font-weight: 500;
+
     @include respond(small) {
       font-size: 25px;
       display: block;

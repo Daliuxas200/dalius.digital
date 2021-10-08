@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
-  <body>
+  <body land='en'>
     <section class="landing" id="section-landing">
       <div class="landing__inner">
         <div class="landing__title-box">
-          <h2 class="landing__title">Dalius</h2>
-          <h2 class="landing__title">Digital</h2>
+          <h1>
+          <span class="landing__title">Dalius</span>
+          <span class="landing__title">Digital</span>
+        </h1>
           <div class="landing__subtitle-box">
-            <h3 class="landing__subtitle">Simple</h3>
-            <h3 class="landing__subtitle">Beautiful</h3>
-            <h3 class="landing__subtitle">Effective</h3>
+            <h3>
+              <span class="landing__subtitle">Simple</span>
+              <span class="landing__subtitle">Beautiful</span>
+              <span class="landing__subtitle">Effective</span>
+            </h3>
           </div>
         </div>
         <sidebar class="sidebar first">
@@ -51,7 +54,7 @@
         <div class="section-about__right">
            <img loading="lazy"
             src="<%= require('./static/images/dog.jpg') %>"
-            alt=""
+            alt="Dalius and Django"
             class="shadow-image"
           />
         </div>
@@ -89,7 +92,7 @@
                 <h3 class="flippy-card__back__title">Stand Out!</h3>
                  <img loading="lazy"
                   src="<%= require('./static/images/square.svg') %>"
-                  alt=""
+                  alt="check mark"
                   class="flippy-card__back__icon"
                 />
               </div>
@@ -119,7 +122,7 @@
                 <h3 class="flippy-card__back__title">Realise your Vision!</h3>
                  <img loading="lazy"
                   src="<%= require('./static/images/bulb.svg') %>"
-                  alt=""
+                  alt="Lightbulb"
                   class="flippy-card__back__icon"
                 />
               </div>
@@ -149,7 +152,7 @@
                 <h3 class="flippy-card__back__title">Save Time!</h3>
                  <img loading="lazy"
                   src="<%= require('./static/images/clock.svg') %>"
-                  alt=""
+                  alt="Clock"
                   class="flippy-card__back__icon"
                 />
               </div>
@@ -189,7 +192,7 @@
               <figure class="project__image-container project__image-container--aig">
                  <img loading="lazy"
                   src="<%= require('./static/images/aig.svg') %>"
-                  alt=""
+                  alt="Atgal i Gamta"
                   class="project__image"
                 />
               </figure>
@@ -210,15 +213,15 @@
               </div>
               <div class="project__content" data-id="stack">
                 <ul class="project__content__stack">
-                  <li> <img loading="lazy" src="<%= require('./static/images/wordpress.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/php.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/mysql.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/html.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/js.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/css.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/sass.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/webpack.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/ga.png') %>" alt=""></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/wordpress.png') %>" alt="wordpress"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/php.png') %>" alt="php"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/mysql.png') %>" alt="mysql"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/html.png') %>" alt="html"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/js.png') %>" alt="js"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/css.png') %>" alt="css"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/sass.png') %>" alt="sass"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/webpack.png') %>" alt="webpack"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/ga.png') %>" alt="google analytics"></li>
                 </ul>
               </div>
             </div>
@@ -235,7 +238,7 @@
               <figure class="project__image-container project__image-container--oorlu">
                  <img loading="lazy"
                   src="<%= require('./static/images/oorlu.svg') %>"
-                  alt=""
+                  alt="oorlu"
                   class="project__image"
                 />
               </figure>
@@ -255,14 +258,14 @@
               </div>
               <div class="project__content" data-id="stack">
                 <ul class="project__content__stack">
-                  <li> <img loading="lazy" src="<%= require('./static/images/python.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/django.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/redis.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/html.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/js.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/css.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/sass.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/webpack.png') %>" alt=""></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/python.png') %>" alt="python"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/django.png') %>" alt="django"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/redis.png') %>" alt="redis"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/html.png') %>" alt="html"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/js.png') %>" alt="js"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/css.png') %>" alt="css"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/sass.png') %>" alt="sass"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/webpack.png') %>" alt="webpack"></li>
                 </ul>
               </div>
             </div>
@@ -280,7 +283,7 @@
             <figure class="project__image-container project__image-container--sengire">
                <img loading="lazy"
                 src="<%= require('./static/images/sengire.png') %>"
-                alt=""
+                alt="Sengire"
                 class="project__image"
               />
             </figure>
@@ -300,12 +303,12 @@
               </div>
               <div class="project__content" data-id="stack">
                 <ul class="project__content__stack">
-                  <li> <img loading="lazy" src="<%= require('./static/images/php.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/html.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/js.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/css.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/gulp.png') %>" alt=""></li>
-                  <li> <img loading="lazy" src="<%= require('./static/images/sass.png') %>" alt=""></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/php.png') %>" alt="php"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/html.png') %>" alt="html"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/js.png') %>" alt="js"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/css.png') %>" alt="css"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/gulp.png') %>" alt="gulp"></li>
+                  <li> <img loading="lazy" src="<%= require('./static/images/sass.png') %>" alt="sass"></li>
                 </ul>
               </div>
             </div>
