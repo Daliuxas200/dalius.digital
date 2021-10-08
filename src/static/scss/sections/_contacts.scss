@@ -21,6 +21,7 @@
 
   &__contacts {
     display: grid;
+    justify-content: start;
 
     img {
       height: 35px;

@@ -2,6 +2,8 @@
   grid-column: full-start / full-end;
   grid-row: landing-start / landing-end;
   position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
 
   &__inner {
     display: grid;

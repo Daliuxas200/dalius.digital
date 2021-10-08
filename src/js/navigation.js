@@ -1,3 +1,5 @@
+const _ = require("lodash");
+
 function scrollNavigation() {
   let mobile_nav_button = document.getElementById("mobile-nav-button");
   let mobile_nav = document.getElementById("mobile-nav");
@@ -67,6 +69,7 @@ function scrollNavigation() {
         return true;
       }
     }
+
     function triggerNavItemStyle(currentSection) {
       scrollLinks.forEach((sl) => {
         if (currentSection && sl.dataset.target === currentSection.id) {
@@ -76,10 +79,10 @@ function scrollNavigation() {
         }
       });
     }
+
     function updateVerticalText(currentSection) {
       let verticalEl = document.getElementById("sidebar-vertical-text");
       if (currentSection) {
-        console.log(currentSection.dataset.name);
         verticalEl.textContent = currentSection.dataset.title.toUpperCase();
       } else {
         verticalEl.textContent = "";
@@ -90,13 +93,17 @@ function scrollNavigation() {
     triggerNavItemStyle(currentSection);
     updateVerticalText(currentSection);
 
-    document.addEventListener("scroll", (e) => {
-      if (checkIfLeftSection(currentSection)) {
-        currentSection = findCurrentSection();
-        triggerNavItemStyle(currentSection);
-        updateVerticalText(currentSection);
-      }
-    });
+    document.addEventListener(
+      "scroll",
+      _.throttle((e) => {
+        if (checkIfLeftSection(currentSection)) {
+          currentSection = findCurrentSection();
+          triggerNavItemStyle(currentSection);
+          updateVerticalText(currentSection);
+        }
+        console.log("checked");
+      }, 100)
+    );
   }
 
   // adjust the height position navigation menus for correct overlap
