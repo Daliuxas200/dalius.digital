@@ -1,6 +1,7 @@
 body {
   font-family: "Gemunu Libre", sans-serif;
   font-weight: 200;
+  font-display: swap;
   display: grid;
   @include section-grid;
   grid-template-rows: [landing-start] 100vh [landing-end];
