@@ -195,7 +195,7 @@
     left: 10px;
     font-size: 20px;
     font-weight: 500;
-    top: 50%;
+    top: calc(50% -50px);
     transform: translateY(-50%);
     writing-mode: vertical-rl;
     text-orientation: upright;
