@@ -101,7 +101,6 @@ function scrollNavigation() {
           triggerNavItemStyle(currentSection);
           updateVerticalText(currentSection);
         }
-        console.log("checked");
       }, 100)
     );
   }
